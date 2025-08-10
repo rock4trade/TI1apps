@@ -121,11 +121,11 @@
       "category": "Плеер"
     },
     {
-      "title": "SmartTube v.Не найдено",
+      "title": "SmartTube v.",
       "adress": "https://github.com/yuliskov/SmartTube",
       "description": "Просмотр видео без рекламы на телевизорах и приставках с ОС Android.",
-      "url": "Не найдено",
-      "app_review": "https://github.com/yuliskov/SmartTube/blob/master/images/browse_home.png?raw=true",
+      "url": "",
+      "app_review": "https://raw.githubusercontent.com/yuliskov/SmartTube/refs/heads/master/images/browse_home.png",
       "category": "ТВ"
     },
     {
