@@ -33,6 +33,14 @@
       "category": "Система"
     },
     {
+      "title": "Filmix Pro v.2.2.7",
+      "adress": "https://androidtvbox.ru/filmix-pro/",
+      "description": "Оффициальное приложение онлайн каталога и кинотеатра Filmix.ac, для просмотра фильмов и сериалов онлайн. Доступна авторизация под своим логином и паролем.",
+      "url": "https://androidtvbox.ru/soft/Filmix-Pro-v2.2.7-Mod.apk",
+      "app_review": "https://androidtvbox.ru/wp-content/uploads/filmix-2-300x169.jpg",
+      "category": "Кино"
+    },
+    {
       "title": "LazyMedia Deluxe v.3.395",
       "adress": "https://strannikmodz.me/apps/media/253-lazymedia-deluxe-389.html",
       "description": "Мульти-каталог онлайн фильмов и сериалов, позволяющий найти практически любой видео контент, доступный из свободных источников. Возможно, что лучший. Есть встроенный агрегатор торрентов.",
@@ -81,12 +89,20 @@
       "category": "Кино"
     },
     {
-      "title": "OTT Navigator (IPTV) v.1.6.8.2",
-      "adress": "https://strannikmodz.me/apps/media/169-ott-navigator-1603.html",
-      "description": "Популярное, функциональное и удобное приложение для IPTV и не только. Картинка-в-картинке, трансляция и много другое. В модификации получен PREMIUM, удалена аналитика, заблокирована реклама.",
-      "url": "https://strannikmodz.me/index.php?do=download&id=3921",
-      "app_review": "https://androidtvbox.ru/wp-content/uploads/ottn-3.jpg",
-      "category": "ТВ"
+      "title": "HDrezka App v.2.2.5",
+      "adress": "https://androidtvbox.ru/hdrezka-app-populyarnyy-onlayn-kinoteatr/",
+      "description": "Официальное бесплатное приложение для просмотра видеоконтента с кино сайта HDrezka для Android. Для доступа к контенту необходим VРN, либо смена настроек зеркала в в самом приложении. Для получения актуального зеркала напишите письмо с любой темой и сообщением на mirror@hdrezka.ag, в ответ придет письмо с рабочим зеркалом, которое нужно добавить. По этому же адресу можно пройти регистрацию на сайте HDRezka для доступа к закладкам и истории просмотров.",
+      "url": "https://androidtvbox.ru/soft/HDrezka-App-v2.2.5.apk",
+      "app_review": "https://androidtvbox.ru/wp-content/uploads/hdrezkaapp-1.jpg",
+      "category": "Кино"
+    },
+    {
+      "title": "Prisma TV v.0.7.2",
+      "adress": "https://androidtvbox.ru/prisma-tv/",
+      "description": "Онлайн-кинотеатр с огромным выбором фильмов и сериалов, который постоянно обновляется и дополняется новыми релизами. Это изменённая версия приложения Lampa уже со всеми скриптами и онлайн возможностями.",
+      "url": "https://androidtvbox.ru/soft/Prisma-TV-v0.7.2-Fix.apk",
+      "app_review": "https://androidtvbox.ru/wp-content/uploads/prisma-1.jpg",
+      "category": "Кино"
     },
     {
       "title": "LostFilmTV v.13.1",
@@ -95,6 +111,46 @@
       "url": "https://strannikmodz.me/index.php?do=download&id=1361",
       "app_review": "https://strannikmodz.me/uploads/posts/2020-09/1600292817_photo_2020-09-17_00-44-59.jpg",
       "category": "Кино"
+    },
+    {
+      "title": "MX Player Pro v.1.93.3",
+      "adress": "https://androidtvbox.ru/mx-player-pro/",
+      "description": "Мощный и наиболее популярный видео плеер для Android устройств. Воспроизводит любое видео. Часто необходим для работы онлайн каталогов и кинотеатров.",
+      "url": "https://androidtvbox.ru/soft/MX-Player-Pro-v1.93.3(armv7)-Mod.apk",
+      "app_review": "https://androidtvbox.ru/wp-content/uploads/mxplayer-1.jpg",
+      "category": "Плеер"
+    },
+    {
+      "title": "SmartTube v.Не найдено",
+      "adress": "https://github.com/yuliskov/SmartTube",
+      "description": "Просмотр видео без рекламы на телевизорах и приставках с ОС Android.",
+      "url": "Не найдено",
+      "app_review": "https://github.com/yuliskov/SmartTube/blob/master/images/browse_home.png?raw=true",
+      "category": "ТВ"
+    },
+    {
+      "title": "Эфир ТВ (TV+ЦТВшка) v.4.1.2",
+      "adress": "https://androidtvbox.ru/tv-ctvshka-besplatnoe-tv/",
+      "description": "Приложение со встроенным видео плеером для бесплатного просмотра телевизионных каналов. На базе ЦТВшки. В приложении доступно более 300 федеральных и региональных ТВ каналов для разных аудиторий и возрастных групп.",
+      "url": "https://androidtvbox.ru/soft/Efir-TV-v4.1.2-Mod.apk",
+      "app_review": "https://androidtvbox.ru/wp-content/uploads/tv-ctvshka-1-300x169.jpg",
+      "category": "ТВ"
+    },
+    {
+      "title": "Televizo v.1.9.3.21",
+      "adress": "https://androidtvbox.ru/televizo-pleer-dlya-prosmotra-ip-televideniya/",
+      "description": "Знаменитый плеер IPTV плеер для просмотра прямых трансляций и архивов телепередач на Андроид устройствах.",
+      "url": "https://androidtvbox.ru/soft/Televizo-v1.9.3.21-arm7.apk",
+      "app_review": "https://androidtvbox.ru/wp-content/uploads/televizo-3-300x169.png",
+      "category": "ТВ"
+    },
+    {
+      "title": "OTT Navigator (IPTV) v.1.6.8.2",
+      "adress": "https://strannikmodz.me/apps/media/169-ott-navigator-1603.html",
+      "description": "Популярное, функциональное и удобное приложение для IPTV и не только. Картинка-в-картинке, трансляция и много другое. В модификации получен PREMIUM, удалена аналитика, заблокирована реклама.",
+      "url": "https://strannikmodz.me/index.php?do=download&id=3921",
+      "app_review": "https://androidtvbox.ru/wp-content/uploads/ottn-3.jpg",
+      "category": "ТВ"
     },
     {
       "title": "TVHD+ v.1.1.14.7",
@@ -113,11 +169,11 @@
       "category": "ТВ"
     },
     {
-      "title": "Эфир ТВ (TV+ЦТВшка) v.4.1.2",
-      "adress": "https://androidtvbox.ru/tv-ctvshka-besplatnoe-tv/",
-      "description": "Приложение со встроенным видео плеером для бесплатного просмотра телевизионных каналов. На базе ЦТВшки. В приложении доступно более 300 федеральных и региональных ТВ каналов для разных аудиторий и возрастных групп.",
-      "url": "https://androidtvbox.ru/soft/Efir-TV-v4.1.2-Mod.apk",
-      "app_review": "https://androidtvbox.ru/wp-content/uploads/tv-ctvshka-1-300x169.jpg",
+      "title": "HD Streamz v.3.9.2",
+      "adress": "https://androidtvbox.ru/hd-streamz/",
+      "description": "Приложение для любителей смотреть иностранные каналы. Здесь есть музыка, фильмы, телепередачи и множество спортивных каналов. Кроме того, сервис предоставляет доступ к радиостанциям.",
+      "url": "https://androidtvbox.ru/soft/HDStreamz-v3.9.2-a.apk",
+      "app_review": "https://androidtvbox.ru/wp-content/uploads/hdstreamz-1-300x169.jpg",
       "category": "ТВ"
     },
     {
@@ -591,54 +647,6 @@
       "url": "https://strannikmodz.me/index.php?do=download&id=6462",
       "app_review": "https://strannikmodz.me/uploads/posts/2020-07/1595321813_photo_2020-07-21_10-55-09.jpg",
       "category": "Прочее"
-    },
-    {
-      "title": "Prisma TV v.0.7.2",
-      "adress": "https://androidtvbox.ru/prisma-tv/",
-      "description": "Онлайн-кинотеатр с огромным выбором фильмов и сериалов, который постоянно обновляется и дополняется новыми релизами. Это изменённая версия приложения Lampa уже со всеми скриптами и онлайн возможностями.",
-      "url": "https://androidtvbox.ru/soft/Prisma-TV-v0.7.2-Fix.apk",
-      "app_review": "https://androidtvbox.ru/wp-content/uploads/prisma-1.jpg",
-      "category": "Кино"
-    },
-    {
-      "title": "Filmix Pro v.2.2.7",
-      "adress": "https://androidtvbox.ru/filmix-pro/",
-      "description": "Оффициальное приложение онлайн каталога и кинотеатра Filmix.ac, для просмотра фильмов и сериалов онлайн. Доступна авторизация под своим логином и паролем.",
-      "url": "https://androidtvbox.ru/soft/Filmix-Pro-v2.2.7-Mod.apk",
-      "app_review": "https://androidtvbox.ru/wp-content/uploads/filmix-2-300x169.jpg",
-      "category": "Кино"
-    },
-    {
-      "title": "MX Player Pro v.1.93.3",
-      "adress": "https://androidtvbox.ru/mx-player-pro/",
-      "description": "Мощный и наиболее популярный видео плеер для Android устройств. Воспроизводит любое видео. Часто необходим для работы онлайн каталогов и кинотеатров.",
-      "url": "https://androidtvbox.ru/soft/MX-Player-Pro-v1.93.3(armv7)-Mod.apk",
-      "app_review": "https://androidtvbox.ru/wp-content/uploads/mxplayer-1.jpg",
-      "category": "Плеер"
-    },
-    {
-      "title": "Televizo v.1.9.3.21",
-      "adress": "https://androidtvbox.ru/televizo-pleer-dlya-prosmotra-ip-televideniya/",
-      "description": "Знаменитый плеер IPTV плеер для просмотра прямых трансляций и архивов телепередач на Андроид устройствах.",
-      "url": "https://androidtvbox.ru/soft/Televizo-v1.9.3.21-arm7.apk",
-      "app_review": "https://androidtvbox.ru/wp-content/uploads/televizo-3-300x169.png",
-      "category": "ТВ"
-    },
-    {
-      "title": "HD Streamz v.3.9.2",
-      "adress": "https://androidtvbox.ru/hd-streamz/",
-      "description": "Приложение для любителей смотреть иностранные каналы. Здесь есть музыка, фильмы, телепередачи и множество спортивных каналов. Кроме того, сервис предоставляет доступ к радиостанциям.",
-      "url": "https://androidtvbox.ru/soft/HDStreamz-v3.9.2-a.apk",
-      "app_review": "https://androidtvbox.ru/wp-content/uploads/hdstreamz-1-300x169.jpg",
-      "category": "ТВ"
-    },
-    {
-      "title": "HDrezka App v.2.2.5",
-      "adress": "https://androidtvbox.ru/hdrezka-app-populyarnyy-onlayn-kinoteatr/",
-      "description": "Официальное бесплатное приложение для просмотра видеоконтента с кино сайта HDrezka для Android. Для доступа к контенту необходим VРN, либо смена настроек зеркала в в самом приложении. Для получения актуального зеркала напишите письмо с любой темой и сообщением на mirror@hdrezka.ag, в ответ придет письмо с рабочим зеркалом, которое нужно добавить. По этому же адресу можно пройти регистрацию на сайте HDRezka для доступа к закладкам и истории просмотров.",
-      "url": "https://androidtvbox.ru/soft/HDrezka-App-v2.2.5.apk",
-      "app_review": "https://androidtvbox.ru/wp-content/uploads/hdrezkaapp-1.jpg",
-      "category": "Кино"
     },
     {
       "title": "Меню питания для Android TV v.1.6",
