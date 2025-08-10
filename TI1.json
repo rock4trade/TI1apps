@@ -121,10 +121,10 @@
       "category": "Плеер"
     },
     {
-      "title": "SmartTube v.",
+      "title": "SmartTube v.Latest",
       "adress": "https://github.com/yuliskov/SmartTube",
       "description": "Просмотр видео без рекламы на телевизорах и приставках с ОС Android.",
-      "url": "",
+      "url": "https://github.com/yuliskov/SmartTube/releases/download/latest/smarttube_stable.apk",
       "app_review": "https://raw.githubusercontent.com/yuliskov/SmartTube/refs/heads/master/images/browse_home.png",
       "category": "ТВ"
     },
