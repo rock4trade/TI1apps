@@ -126,7 +126,15 @@
       "description": "Просмотр видео без рекламы на телевизорах и приставках с ОС Android.",
       "url": "https://github.com/yuliskov/SmartTube/releases/download/latest/smarttube_stable.apk",
       "app_review": "https://raw.githubusercontent.com/yuliskov/SmartTube/refs/heads/master/images/browse_home.png",
-      "category": "ТВ"
+      "category": "Youtube"
+    },
+    {
+      "title": "ByeByeDPI v.1.6.5",
+      "adress": "https://github.com/romanvht/ByeByeDPI",
+      "description": "Снятие ограничений и цензуры. Приложение для Android, которое локально запускает ByeDPI и перенаправляет весь трафик через него.",
+      "url": "https://github.com/romanvht/ByeByeDPI/releases/download/v.1.6.5/ByeByeDPI-v1.6.5-universal-release.apk",
+      "app_review": "https://raw.githubusercontent.com/romanvht/ByeByeDPI/master/.github/images/app.svg",
+      "category": "Youtube"
     },
     {
       "title": "Эфир ТВ (TV+ЦТВшка) v.4.1.2",
