@@ -137,6 +137,22 @@
       "category": "Youtube"
     },
     {
+      "title": "Amnezia VPN v.4.8.9.2",
+      "adress": "https://github.com/amnezia-vpn/amnezia-client",
+      "description": "Клиент для собственного VPN. (С правами управления и настройки) ",
+      "url": "https://github.com/amnezia-vpn/amnezia-client/releases/download/4.8.9.2/AmneziaVPN_4.8.9.2_android_7_armeabi-v7a.apk",
+      "app_review": "https://raw.githubusercontent.com/amnezia-vpn/amnezia-client/dev/metadata/img-readme/uipic4.png",
+      "category": "Youtube"
+    },
+    {
+      "title": "Amnezia WG v.1.1.2",
+      "adress": "https://github.com/amnezia-vpn/amneziawg-android",
+      "description": "Клиент для собственного VPN",
+      "url": "https://github.com/amnezia-vpn/amneziawg-android/releases/download/v1.1.2/AmneziaWG.apk",
+      "app_review": "https://docs.amnezia.org/ru/assets/images/OG-5762ed4c3397cbaffc545cb422e052b1.png",
+      "category": "Youtube"
+    },
+    {
       "title": "Эфир ТВ (TV+ЦТВшка) v.4.1.2",
       "adress": "https://androidtvbox.ru/tv-ctvshka-besplatnoe-tv/",
       "description": "Приложение со встроенным видео плеером для бесплатного просмотра телевизионных каналов. На базе ЦТВшки. В приложении доступно более 300 федеральных и региональных ТВ каналов для разных аудиторий и возрастных групп.",
