@@ -153,26 +153,26 @@
       "category": "Youtube"
     },
     {
-      "title": "ByeByeDPI v.1.7.4",
+      "title": "ByeByeDPI v.1.8.2",
       "adress": "https://github.com/romanvht/ByeByeDPI",
       "description": "Снятие ограничений и цензуры. Приложение для Android, которое локально запускает ByeDPI и перенаправляет весь трафик через него.",
-      "url": "https://github.com/romanvht/ByeByeDPI/releases/download/v.1.7.4/ByeByeDPI-v1.7.4-universal-release.apk",
+      "url": "https://github.com/romanvht/ByeByeDPI/releases/download/v.1.8.2/ByeByeDPI-v1.8.2-universal-release.apk",
       "app_review": "https://raw.githubusercontent.com/romanvht/ByeByeDPI/master/.github/images/app.svg",
       "category": "Youtube"
     },
     {
-      "title": "Amnezia VPN v.4.8.9.2",
+      "title": "Amnezia VPN v.5.0.3.0",
       "adress": "https://github.com/amnezia-vpn/amnezia-client",
       "description": "Клиент для собственного VPN. (С правами управления и настройки) ",
-      "url": "https://github.com/amnezia-vpn/amnezia-client/releases/download/4.8.9.2/AmneziaVPN_4.8.9.2_android_7_armeabi-v7a.apk",
+      "url": "https://github.com/amnezia-vpn/amnezia-client/releases/download/5.0.3.0/AmneziaVPN_5.0.3.0_android9-10_armeabi-v7a.apk",
       "app_review": "https://raw.githubusercontent.com/amnezia-vpn/amnezia-client/dev/metadata/img-readme/uipic4.png",
       "category": "Youtube"
     },
     {
-      "title": "Amnezia WG v.1.1.2",
+      "title": "Amnezia WG v.3.1.2",
       "adress": "https://github.com/amnezia-vpn/amneziawg-android",
       "description": "Клиент для собственного VPN",
-      "url": "https://github.com/amnezia-vpn/amneziawg-android/releases/download/v1.1.2/AmneziaWG.apk",
+      "url": "https://github.com/amnezia-vpn/amneziawg-android/releases/download/v3.1.20260814/AmneziaWG-3.1.202060814.apk",
       "app_review": "https://docs.amnezia.org/ru/assets/images/OG-5762ed4c3397cbaffc545cb422e052b1.png",
       "category": "Youtube"
     },
