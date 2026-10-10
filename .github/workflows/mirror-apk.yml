@@ -40,7 +40,7 @@ jobs:
 
       - name: Upload APK to Release
         run: |
-          # Переименовываем файл перед загрузкой, чтобы он имел правильное имя
+          # Переименовываем файл перед загрузкой, чтобы в релизе он имел правильное имя (например, ti1-strannik-health-1422.apk)
           mv temp.apk "${{ github.event.client_payload.assetName }}"
           
           gh release upload ${{ github.event.client_payload.tag }} "${{ github.event.client_payload.assetName }}" \
@@ -54,11 +54,11 @@ jobs:
           FINAL_URL="https://github.com/${{ github.repository }}/releases/download/${{ github.event.client_payload.tag }}/${{ github.event.client_payload.assetName }}"
           
           echo "=== Отправка вебхука в Google Apps Script ==="
-          echo "URL: ${{ secrets.GAS_WEBHOOK_URL }}"
           echo "Данные: row=${{ github.event.client_payload.row }}, url=$FINAL_URL"
           
-          # Флаг -s скрывает прогресс, а -w выводит итоговый HTTP-код и тело ответа
-          curl -s -w "\n\n--- HTTP Code ответа от Google: %{http_code} ---\n" -X POST \
+          # Флаг -L критически важен: он заставляет curl следовать за редиректами (код 302), 
+          # гарантируя, что данные всё равно будут доставлены в скрипт.
+          curl -s -L -w "\n\n--- Итоговый HTTP Code ответа от Google: %{http_code} ---\n" -X POST \
             -H "Content-Type: application/json" \
             -d "{\"row\": \"${{ github.event.client_payload.row }}\", \"url\": \"$FINAL_URL\", \"secret\": \"${{ secrets.GAS_WEBHOOK_SECRET }}\"}" \
             "${{ secrets.GAS_WEBHOOK_URL }}"
