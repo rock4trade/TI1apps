@@ -8,6 +8,10 @@ jobs:
   mirror:
     runs-on: ubuntu-latest
     steps:
+      # 1. ЭТОТ ШАГ ОБЯЗАТЕЛЕН: он клонирует репозиторий и создает папку .git
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Download APK
         run: |
           echo "Скачиваем файл: ${{ github.event.client_payload.url }}"
@@ -20,8 +24,10 @@ jobs:
 
       - name: Check if Release exists, create if not
         run: |
-          gh release view ${{ github.event.client_payload.tag }} || \
+          # Добавлен флаг --repo для явного указания репозитория
+          gh release view ${{ github.event.client_payload.tag }} --repo ${{ github.repository }} || \
           gh release create ${{ github.event.client_payload.tag }} \
+            --repo ${{ github.repository }} \
             --title "${{ github.event.client_payload.appName }} — v.${{ github.event.client_payload.version }}" \
             --notes "Автоматическое зеркало APK: ${{ github.event.client_payload.appName }}
           Версия: ${{ github.event.client_payload.version }}
@@ -33,9 +39,10 @@ jobs:
 
       - name: Upload APK to Release
         run: |
-          # Флаг --clobber автоматически перезапишет файл с тем же именем, 
-          # что заменяет сложную логику "удалить старый, переименовать новый"
-          gh release upload ${{ github.event.client_payload.tag }} "temp.apk#${{ github.event.client_payload.assetName }}" --clobber
+          # Флаг --clobber автоматически перезапишет файл с тем же именем
+          gh release upload ${{ github.event.client_payload.tag }} "temp.apk#${{ github.event.client_payload.assetName }}" \
+            --repo ${{ github.repository }} \
+            --clobber
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
