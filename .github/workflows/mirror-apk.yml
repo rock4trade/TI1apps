@@ -7,11 +7,8 @@ on:
 jobs:
   mirror:
     runs-on: ubuntu-latest
-    
-    # 👇 ЭТОТ БЛОК РЕШАЕТ ПРОБЛЕМУ 403 👇
     permissions:
-      contents: write  # Разрешает создание релизов и загрузку файлов
-    # 👆 --------------------------------- 👆
+      contents: write
 
     steps:
       - name: Checkout repository
@@ -43,7 +40,10 @@ jobs:
 
       - name: Upload APK to Release
         run: |
-          gh release upload ${{ github.event.client_payload.tag }} "temp.apk#${{ github.event.client_payload.assetName }}" \
+          # Переименовываем файл перед загрузкой, чтобы он имел правильное имя
+          mv temp.apk "${{ github.event.client_payload.assetName }}"
+          
+          gh release upload ${{ github.event.client_payload.tag }} "${{ github.event.client_payload.assetName }}" \
             --repo ${{ github.repository }} \
             --clobber
         env:
@@ -52,6 +52,13 @@ jobs:
       - name: Notify Google Apps Script (Success)
         run: |
           FINAL_URL="https://github.com/${{ github.repository }}/releases/download/${{ github.event.client_payload.tag }}/${{ github.event.client_payload.assetName }}"
-          curl -X POST -H "Content-Type: application/json" \
-            -d '{"row": "${{ github.event.client_payload.row }}", "url": "'"$FINAL_URL"'", "secret": "${{ secrets.GAS_WEBHOOK_SECRET }}"}' \
+          
+          echo "=== Отправка вебхука в Google Apps Script ==="
+          echo "URL: ${{ secrets.GAS_WEBHOOK_URL }}"
+          echo "Данные: row=${{ github.event.client_payload.row }}, url=$FINAL_URL"
+          
+          # Флаг -s скрывает прогресс, а -w выводит итоговый HTTP-код и тело ответа
+          curl -s -w "\n\n--- HTTP Code ответа от Google: %{http_code} ---\n" -X POST \
+            -H "Content-Type: application/json" \
+            -d "{\"row\": \"${{ github.event.client_payload.row }}\", \"url\": \"$FINAL_URL\", \"secret\": \"${{ secrets.GAS_WEBHOOK_SECRET }}\"}" \
             "${{ secrets.GAS_WEBHOOK_URL }}"
