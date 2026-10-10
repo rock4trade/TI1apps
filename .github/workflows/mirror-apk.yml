@@ -1,0 +1,47 @@
+name: Mirror APK to Release
+
+on:
+  repository_dispatch:
+    types: [mirror_apk]
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download APK
+        run: |
+          echo "Скачиваем файл: ${{ github.event.client_payload.url }}"
+          curl -L -A "Mozilla/5.0 (Linux; Android 9; Mobile) AppleWebKit/537.36" \
+            -e "${{ github.event.client_payload.sourcePageUrl }}" \
+            -o temp.apk "${{ github.event.client_payload.url }}"
+          
+          FILE_SIZE=$(ls -lh temp.apk | awk '{print $5}')
+          echo "Успешно скачано. Размер: $FILE_SIZE"
+
+      - name: Check if Release exists, create if not
+        run: |
+          gh release view ${{ github.event.client_payload.tag }} || \
+          gh release create ${{ github.event.client_payload.tag }} \
+            --title "${{ github.event.client_payload.appName }} — v.${{ github.event.client_payload.version }}" \
+            --notes "Автоматическое зеркало APK: ${{ github.event.client_payload.appName }}
+          Версия: ${{ github.event.client_payload.version }}
+          Дата: ${{ github.event.client_payload.date }}
+          Исходная страница: ${{ github.event.client_payload.sourcePageUrl }}" \
+            --prerelease
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload APK to Release
+        run: |
+          # Флаг --clobber автоматически перезапишет файл с тем же именем, 
+          # что заменяет сложную логику "удалить старый, переименовать новый"
+          gh release upload ${{ github.event.client_payload.tag }} "temp.apk#${{ github.event.client_payload.assetName }}" --clobber
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Notify Google Apps Script (Success)
+        run: |
+          FINAL_URL="https://github.com/${{ github.repository }}/releases/download/${{ github.event.client_payload.tag }}/${{ github.event.client_payload.assetName }}"
+          curl -X POST -H "Content-Type: application/json" \
+            -d '{"row": "${{ github.event.client_payload.row }}", "url": "'"$FINAL_URL"'", "secret": "${{ secrets.GAS_WEBHOOK_SECRET }}"}' \
+            "${{ secrets.GAS_WEBHOOK_URL }}"
