@@ -7,8 +7,13 @@ on:
 jobs:
   mirror:
     runs-on: ubuntu-latest
+    
+    # 👇 ЭТОТ БЛОК РЕШАЕТ ПРОБЛЕМУ 403 👇
+    permissions:
+      contents: write  # Разрешает создание релизов и загрузку файлов
+    # 👆 --------------------------------- 👆
+
     steps:
-      # 1. ЭТОТ ШАГ ОБЯЗАТЕЛЕН: он клонирует репозиторий и создает папку .git
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -24,7 +29,6 @@ jobs:
 
       - name: Check if Release exists, create if not
         run: |
-          # Добавлен флаг --repo для явного указания репозитория
           gh release view ${{ github.event.client_payload.tag }} --repo ${{ github.repository }} || \
           gh release create ${{ github.event.client_payload.tag }} \
             --repo ${{ github.repository }} \
@@ -39,7 +43,6 @@ jobs:
 
       - name: Upload APK to Release
         run: |
-          # Флаг --clobber автоматически перезапишет файл с тем же именем
           gh release upload ${{ github.event.client_payload.tag }} "temp.apk#${{ github.event.client_payload.assetName }}" \
             --repo ${{ github.repository }} \
             --clobber
