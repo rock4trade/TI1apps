@@ -1,0 +1,88 @@
+name: Cleanup All Releases and Tags
+
+on:
+  # Ручной запуск через кнопку "Run workflow" во вкладке Actions
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'Введите DELETE для подтверждения удаления всех релизов'
+        required: true
+        default: ''
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Обязательное право для удаления релизов и тегов
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Защита от случайного запуска - нужно ввести слово DELETE
+      - name: Verify confirmation
+        run: |
+          if [ "${{ github.event.inputs.confirm }}" != "DELETE" ]; then
+            echo "❌ Отмена: вы не ввели слово DELETE для подтверждения."
+            echo "Чтобы запустить очистку, нажмите 'Run workflow' и введите DELETE в поле."
+            exit 1
+          fi
+          echo "✅ Подтверждение получено. Начинаем очистку..."
+
+      - name: Delete all Releases
+        run: |
+          echo "Получаем список всех релизов..."
+          
+          # Получаем список всех релизов в формате "tag_name"
+          RELEASES=$(gh release list --repo ${{ github.repository }} --limit 1000 --json tagName --jq '.[].tagName')
+          
+          if [ -z "$RELEASES" ]; then
+            echo "Релизов для удаления не найдено."
+          else
+            COUNT=$(echo "$RELEASES" | wc -l)
+            echo "Найдено релизов для удаления: $COUNT"
+            echo ""
+            
+            # Удаляем каждый релиз по очереди
+            echo "$RELEASES" | while read -r tag; do
+              if [ -n "$tag" ]; then
+                echo "Удаляем релиз: $tag"
+                gh release delete "$tag" --repo ${{ github.repository }} --yes --cleanup-tag || true
+              fi
+            done
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Delete orphaned tags
+        run: |
+          echo ""
+          echo "Удаляем оставшиеся теги (orphans)..."
+          
+          # Получаем все теги репозитория через Git refs API
+          TAGS=$(gh api "repos/${{ github.repository }}/git/matching-refs/tags/" --jq '.[].ref' | sed 's|refs/tags/||')
+          
+          if [ -z "$TAGS" ]; then
+            echo "Тегов для удаления не найдено."
+          else
+            COUNT=$(echo "$TAGS" | wc -l)
+            echo "Найдено тегов для удаления: $COUNT"
+            echo ""
+            
+            echo "$TAGS" | while read -r tag; do
+              if [ -n "$tag" ]; then
+                echo "Удаляем тег: $tag"
+                gh api -X DELETE "repos/${{ github.repository }}/git/refs/tags/$tag" || true
+              fi
+            done
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Summary
+        run: |
+          echo ""
+          echo "========================================"
+          echo "✅ ОЧИСТКА ЗАВЕРШЕНА УСПЕШНО"
+          echo "Все релизы и теги удалены из репозитория."
+          echo "========================================"
