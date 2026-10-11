@@ -14,15 +14,31 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Download APK
+      - name: Download APK (с повторными попытками)
         run: |
           echo "Скачиваем файл: ${{ github.event.client_payload.url }}"
-          curl -L -A "Mozilla/5.0 (Linux; Android 9; Mobile) AppleWebKit/537.36" \
-            -e "${{ github.event.client_payload.sourcePageUrl }}" \
-            -o temp.apk "${{ github.event.client_payload.url }}"
+          echo "Referer (страница): ${{ github.event.client_payload.sourcePageUrl }}"
+          
+          USER_AGENT="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+          
+          # Скачиваем с повторными попытками и таймаутами
+          for i in 1 2 3; do
+            echo "Попытка $i..."
+            curl -L --retry 2 --retry-delay 3 --connect-timeout 30 --max-time 300 \
+              -A "$USER_AGENT" \
+              -e "${{ github.event.client_payload.sourcePageUrl }}" \
+              -o temp.apk "${{ github.event.client_payload.url }}" && break
+            echo "Попытка $i не удалась, ждем 5 секунд..."
+            sleep 5
+          done
+          
+          if [ ! -f temp.apk ] || [ ! -s temp.apk ]; then
+            echo "❌ Не удалось скачать файл после 3 попыток"
+            exit 1
+          fi
           
           FILE_SIZE=$(ls -lh temp.apk | awk '{print $5}')
-          echo "Успешно скачано. Размер: $FILE_SIZE"
+          echo "✅ Успешно скачано. Размер: $FILE_SIZE"
 
       - name: Check if Release exists, create if not
         run: |
@@ -40,9 +56,7 @@ jobs:
 
       - name: Upload APK to Release
         run: |
-          # Переименовываем файл перед загрузкой, чтобы в релизе он имел правильное имя (например, ti1-strannik-health-1422.apk)
           mv temp.apk "${{ github.event.client_payload.assetName }}"
-          
           gh release upload ${{ github.event.client_payload.tag }} "${{ github.event.client_payload.assetName }}" \
             --repo ${{ github.repository }} \
             --clobber
@@ -56,9 +70,8 @@ jobs:
           echo "=== Отправка вебхука в Google Apps Script ==="
           echo "Данные: row=${{ github.event.client_payload.row }}, url=$FINAL_URL"
           
-          # Флаг -L критически важен: он заставляет curl следовать за редиректами (код 302), 
-          # гарантируя, что данные всё равно будут доставлены в скрипт.
           curl -s -L -w "\n\n--- Итоговый HTTP Code ответа от Google: %{http_code} ---\n" -X POST \
             -H "Content-Type: application/json" \
             -d "{\"row\": \"${{ github.event.client_payload.row }}\", \"url\": \"$FINAL_URL\", \"secret\": \"${{ secrets.GAS_WEBHOOK_SECRET }}\"}" \
-            "${{ secrets.GAS_WEBHOOK_URL }}"
+            "${{ secrets.GAS_WEBHOOK_URL }}" || true
+            
