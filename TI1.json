@@ -692,7 +692,7 @@
       "title": "Авто регион (Все коды регионов) v.10.00.19",
       "adress": "https://strannikmodz.me/apps/transport/458-vse-kody-regionov-80602.html",
       "description": "Инструмент для определения региона регистрации автомобиля по индексу в номере. Встроена база регионов СНГ.",
-      "url": "PENDING_GITHUB_ACTIONS",
+      "url": "https://github.com/rock4trade/TI1apps/releases/download/ti1-strannik-transport-458/ti1-strannik-transport-458.apk",
       "app_review": "https://strannikmodz.me/uploads/posts/2020-07/1595321813_photo_2020-07-21_10-55-09.jpg",
       "category": "Прочее"
     },
