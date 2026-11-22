@@ -36,7 +36,7 @@
       "title": "LocalSend v.1.18.2",
       "adress": "https://androidtvbox.ru/localsend/",
       "description": "Кроссплатформенное приложение, предназначенное для обмена данными между устройствами в рамках общей локальной Wi-Fi сети.",
-      "url": "PENDING_GITHUB_ACTIONS",
+      "url": "https://github.com/rock4trade/TI1apps/releases/download/ti1-androidtvbox-ru-localsend/ti1-androidtvbox-ru-localsend.apk",
       "app_review": "https://androidtvbox.ru/wp-content/uploads/localsend-2.jpg",
       "category": "Система"
     },
@@ -76,7 +76,7 @@
       "title": "Kino HD v.3.6.1",
       "adress": "https://androidtvbox.ru/kino-hd/",
       "description": "Очень модный клиент online-кинотеатров. Множество фильмов, сериалов, трейлеров. В модификации получен PREMIUM, заблокирована аналитика и реклама.",
-      "url": "PENDING_GITHUB_ACTIONS",
+      "url": "https://github.com/rock4trade/TI1apps/releases/download/ti1-androidtvbox-ru-kino-hd/ti1-androidtvbox-ru-kino-hd.apk",
       "app_review": "https://androidtvbox.ru/wp-content/uploads/kinohd-3.jpg",
       "category": "Кино"
     },
@@ -132,7 +132,7 @@
       "title": "Lift v.0.2.52",
       "adress": "https://androidtvbox.ru/lift/",
       "description": "Онлайн-кинотеатр, предоставляющий доступ к обширной медиатеке фильмов и сериалов для просмотра на Android устройствах.",
-      "url": "PENDING_GITHUB_ACTIONS",
+      "url": "https://github.com/rock4trade/TI1apps/releases/download/ti1-androidtvbox-ru-lift/ti1-androidtvbox-ru-lift.apk",
       "app_review": "https://androidtvbox.ru/wp-content/uploads/lift-1.jpg",
       "category": "Кино"
     },
@@ -148,7 +148,7 @@
       "title": "Seena v.1.9.9",
       "adress": "https://androidtvbox.ru/seena/",
       "description": "Онлайн кинотеатр с функцией торрент-клиента и встроенным медиаплеером для просмотра видео контента. Медиатека приложения включает фильмы, сериалы, мультфильмы и аниме, а так же содержит специализированный раздел «Наука» с научно-документальными фильмами и сериалами.",
-      "url": "PENDING_GITHUB_ACTIONS",
+      "url": "https://github.com/rock4trade/TI1apps/releases/download/ti1-androidtvbox-ru-seena/ti1-androidtvbox-ru-seena.apk",
       "app_review": "https://androidtvbox.ru/wp-content/uploads/seena-1.jpg",
       "category": "Кино"
     },
