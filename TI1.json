@@ -33,6 +33,14 @@
       "category": "Система"
     },
     {
+      "title": "LocalSend v.1.18.2",
+      "adress": "https://androidtvbox.ru/localsend/",
+      "description": "Кроссплатформенное приложение, предназначенное для обмена данными между устройствами в рамках общей локальной Wi-Fi сети.",
+      "url": "PENDING_GITHUB_ACTIONS",
+      "app_review": "https://androidtvbox.ru/wp-content/uploads/localsend-2.jpg",
+      "category": "Система"
+    },
+    {
       "title": "Navigation Bar v.3.2.3",
       "adress": "https://strannikmodz.me/apps/ui/677-navigation-bar.html",
       "description": "Приложение для создания (или замены стандартной) навигационной панели Android с обширными вариантами обработки действий.",
@@ -65,11 +73,11 @@
       "category": "Кино"
     },
     {
-      "title": "Kino HD v.3.4.7",
-      "adress": "https://strannikmodz.me/apps/media/263-kinohd-267.html",
+      "title": "Kino HD v.3.6.1",
+      "adress": "https://androidtvbox.ru/kino-hd/",
       "description": "Очень модный клиент online-кинотеатров. Множество фильмов, сериалов, трейлеров. В модификации получен PREMIUM, заблокирована аналитика и реклама.",
-      "url": "https://github.com/rock4trade/TI1apps/releases/download/ti1-strannik-media-263/ti1-strannik-media-263.apk",
-      "app_review": "https://strannikmodz.me/uploads/posts/2020-05/1589964130_photo_2020-05-20_10-41-08.jpg",
+      "url": "PENDING_GITHUB_ACTIONS",
+      "app_review": "https://androidtvbox.ru/wp-content/uploads/kinohd-3.jpg",
       "category": "Кино"
     },
     {
@@ -121,11 +129,27 @@
       "category": "Кино"
     },
     {
+      "title": "Lift v.0.2.52",
+      "adress": "https://androidtvbox.ru/lift/",
+      "description": "Онлайн-кинотеатр, предоставляющий доступ к обширной медиатеке фильмов и сериалов для просмотра на Android устройствах.",
+      "url": "PENDING_GITHUB_ACTIONS",
+      "app_review": "https://androidtvbox.ru/wp-content/uploads/lift-1.jpg",
+      "category": "Кино"
+    },
+    {
       "title": "Prisma TV v.1.4.0",
       "adress": "https://androidtvbox.ru/prisma-tv/",
       "description": "Онлайн-кинотеатр с огромным выбором фильмов и сериалов, который постоянно обновляется и дополняется новыми релизами. Это изменённая версия приложения Lampa уже со всеми скриптами и онлайн возможностями.",
       "url": "https://github.com/rock4trade/TI1apps/releases/download/ti1-androidtvbox-ru-prisma-tv/ti1-androidtvbox-ru-prisma-tv.apk",
       "app_review": "https://androidtvbox.ru/wp-content/uploads/prisma-1.jpg",
+      "category": "Кино"
+    },
+    {
+      "title": "Seena v.1.9.9",
+      "adress": "https://androidtvbox.ru/seena/",
+      "description": "Онлайн кинотеатр с функцией торрент-клиента и встроенным медиаплеером для просмотра видео контента. Медиатека приложения включает фильмы, сериалы, мультфильмы и аниме, а так же содержит специализированный раздел «Наука» с научно-документальными фильмами и сериалами.",
+      "url": "PENDING_GITHUB_ACTIONS",
+      "app_review": "https://androidtvbox.ru/wp-content/uploads/seena-1.jpg",
       "category": "Кино"
     },
     {
