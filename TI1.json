@@ -33,10 +33,10 @@
       "category": "Система"
     },
     {
-      "title": "LocalSend v.1.18.2",
+      "title": "LocalSend v.1.19.0",
       "adress": "https://androidtvbox.ru/localsend/",
       "description": "Кроссплатформенное приложение, предназначенное для обмена данными между устройствами в рамках общей локальной Wi-Fi сети.",
-      "url": "https://github.com/rock4trade/TI1apps/releases/download/ti1-androidtvbox-ru-localsend/ti1-androidtvbox-ru-localsend.apk",
+      "url": "PENDING_GITHUB_ACTIONS",
       "app_review": "https://androidtvbox.ru/wp-content/uploads/localsend-2.jpg",
       "category": "Система"
     },
